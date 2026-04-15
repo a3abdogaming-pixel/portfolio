@@ -1,1 +1,220 @@
-# portfolio
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد - فيديو إديتور محترف</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        
+        /* Header & Nav */
+        header { background: rgba(0,0,0,0.9); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #ffd700; }
+        
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; background: url('https://images.unsplash.com/photo-1516321310764-9f3c9619b510') center/cover; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 2rem; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; animation: fadeInUp 1s ease; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; animation: fadeInUp 1s ease 0.2s both; }
+        .btn { display: inline-block; background: #ffd700; color: #333; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; animation: fadeInUp 1s ease 0.4s both; }
+        .btn:hover { transform: translateY(-3px); }
+        
+        /* Sections */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: white; }
+        
+        /* About */
+        .about { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 3rem; margin: 2rem auto; max-width: 800px; }
+        .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 2rem; border: 5px solid #ffd700; }
+        
+        /* Portfolio Grid */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .portfolio-item { background: rgba(255,255,255,0.1); border-radius: 15px; overflow: hidden; transition: transform 0.3s; }
+        .portfolio-item:hover { transform: translateY(-10px); }
+        .portfolio-item img, .portfolio-item video { width: 100%; height: 250px; object-fit: cover; }
+        .portfolio-info { padding: 1.5rem; color: white; }
+        
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; text-align: center; color: white; }
+        .service i { font-size: 3rem; color: #ffd700; margin-bottom: 1rem; }
+        
+        /* CV */
+        .cv { background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 15px; }
+        .cv-download { display: inline-block; background: #ffd700; color: #333; padding: 1rem 2rem; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 2rem; }
+        
+        /* Contact */
+        .contact-form { max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; color: white; margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 1rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.9); font-size: 1rem; }
+        .form-group button { background: #ffd700; color: #333; padding: 1rem 2rem; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1.1rem; }
+        
+        /* Footer */
+        footer { background: rgba(0,0,0,0.9); color: white; text-align: center; padding: 2rem; }
+        
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 3rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🎬 محمد الفيديو إديتور</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عني</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#portfolio">البورتفوليو</a></li>
+                <li><a href="#cv">السيرة الذاتية</a></li>
+                <li><a href="#contact">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>محمد - فيديو إديتور محترف</h1>
+            <p>أحول أفكارك لقصص بصرية مذهلة | 5+ سنوات خبرة | جودة احترافية</p>
+            <a href="#portfolio" class="btn">شاهد أعمالي <i class="fas fa-arrow-left"></i></a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="صورة محمد" class="profile-img">
+        <h2>من أنا؟</h2>
+        <p>أنا محمد، فيديو إديتور شغوف بصناعة المحتوى المرئي. أعمل على مشاريع متنوعة من الإعلانات، الفيديوهات الاجتماعية، والأفلام القصيرة. خبرتي تمتد لأكثر من 5 سنوات مع عملاء من جميع أنحاء العالم.</p>
+        <p><strong>المهارات:</strong> Premiere Pro • After Effects • DaVinci Resolve • Motion Graphics • Color Grading</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>خدماتي</h2>
+        <div class="services-grid">
+            <div class="service">
+                <i class="fas fa-cut"></i>
+                <h3>مونتاج فيديو</h3>
+                <p>مونتاج احترافي لفيديوهاتك بأعلى جودة</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-magic"></i>
+                <h3>مؤثرات بصرية</h3>
+                <p>After Effects ومؤثرات خاصة مذهلة</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-palette"></i>
+                <h3>تصحيح ألوان</h3>
+                <p>Color Grading بمعايير هوليوود</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-music"></i>
+                <h3>ساوند ديزاين</h3>
+                <p>تصميم صوتي وموسيقى خلفية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" style="background: rgba(0,0,0,0.8);">
+        <h2>أعمالي المميزة</h2>
+        <div class="portfolio-grid">
+            <!-- غير الروابط دي بروابط فيديوهاتك من يوتيوب أو Vimeo -->
+            <div class="portfolio-item">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <div class="portfolio-info">
+                    <h3>إعلان تجاري</h3>
+                    <p>إعلان لشركة تقنية مع مؤثرات بصرية</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=250&fit=crop" alt="عمل 2">
+                <div class="portfolio-info">
+                    <h3>فيديو توضيحي</h3>
+                    <p>شرح منتج مع Motion Graphics</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+                <div class="portfolio-info">
+                    <h3>فيديو اجتماعي</h3>
+                    <p>محتوى تيك توك وإنستجرام</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="cv">
+        <h2>السيرة الذاتية</h2>
+        <div style="background: white; padding: 2rem; border-radius: 10px; color: #333;">
+            <h3>محمد أحمد - فيديو إديتور</h3>
+            <p><strong>الخبرة:</strong> 5+ سنوات</p>
+            <p><strong>المهارات:</strong> Adobe Premiere, After Effects, Photoshop, Illustrator</p>
+            <p><strong>اللغات:</strong> العربية (أصلي), الإنجليزية (متقدم)</p>
+            <a href="#" class="cv-download" download>تحميل CV PDF <i class="fas fa-download"></i></a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>تواصل معايا</h2>
+        <form class="contact-form" onsubmit="alert('تم إرسال الرسالة! شكراً لك'); return false;">
+            <div class="form-group">
+                <label>الاسم</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>الإيميل</label>
+                <input type="email" required>
+            </div>
+            <div class="form-group">
+                <label>الرسالة</label>
+                <textarea rows="5" required></textarea>
+            </div>
+            <button type="submit">إرسال <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 محمد الفيديو إديتور. جميع الحقوق محفوظة.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 1rem;"><i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i></a>
+            <a href="#" style="color: white; margin: 0 1rem;"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+            <a href="#" style="color: white; margin: 0 1rem;"><i class="fab fa-linkedin" style="font-size: 1.5rem;"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').style.background = window.scrollY > 100 ? 'rgba(0,0,0,0.95)' : 'rgba(0,0,0,0.9)';
+        });
+    </script>
+</body>
+</html>
